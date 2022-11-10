@@ -1,0 +1,383 @@
+/* curriculum page */
+
+
+
+.wrapper {
+    background:#dedede;
+}
+
+.br_on {
+    display: none;
+}
+
+.top-banner {
+    .banner-image {
+        padding-top: calc(100%/3);
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.curriculum {
+    background:rgba(255,255,255);
+    padding:20px 30px;
+    margin-bottom: 3vh;
+    .curriculum-image {
+        margin: 0 auto;
+    }
+    .details {
+        padding:20px 10px;
+        background:rgba(255, 225, 225,0.66);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .curriculum-details {
+            // background:blue;
+            h3 {
+                color:rgb(223, 119, 39);
+            }
+            .course-types {
+                display: flex;
+                flex-direction: row;
+               ul {
+                list-style-type: none;
+                padding:0;
+                li {
+                    display:inline-block;
+                    text-align: center;
+                    border: 1px solid #9a9a9a;
+                    font-size: 0.7em;
+                    padding: 5px 20px;
+                    margin-right: 5px;
+                    background:#9a9a9a;
+                    color:#fff;
+                }
+               }
+            }
+        }
+    }
+    .recommend {
+        .recommend-for {
+            display: flex;
+            flex-direction: row;
+            margin: 3vh auto;
+            .item {
+                width: calc(100% / 3);
+                .text {
+                    width: 98%;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 1px solid #9a9a9a;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .button-area {
+        background: rgb(241, 104, 33);
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 3px 6px rgba(50, 50, 50, 0.66);
+    }
+}
+
+
+.guidelines {
+    margin:4vh auto 8vh;
+    
+    // background:rgb(255, 255, 255);
+    .course-guidelines {
+        padding:4vh 0;
+        background:rgb(255,255,255);
+        h3 {
+            text-align: center;
+            margin-top:4vh;
+            font-size: 2.5em;
+            span {
+                padding-bottom:3px;
+                border-bottom:3px solid rgb(255,127,79);
+            }
+        }
+        h4 {
+            text-align: center;
+            margin:5vh auto;
+            line-height: 2em;
+            font-size: 1.25em;
+        }
+        .list {
+            display: flex;
+            flex-direction: row;
+            .course-list {
+                width:20%;
+                text-align: center;
+                border:1px solid #9a9a9a;
+                background:#fff;
+            }
+        }
+        .menu-list {
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            padding:0 10px;
+            .menu {
+                width:24%;
+                margin:0 auto 2vh;
+                text-align: center;
+                .top {
+                    color:#fff;
+                    font-weight: bold;
+                    background:rgb(33,37,41);
+                    padding:1vh 10px;
+                }
+                .bottom {
+                    border:1px solid #9a9a9a;
+                    padding:10px 20px;
+                }
+            }
+        }
+        
+    }
+    .course-and-short-description {
+        margin:3vh auto;
+        .course-type {
+            // background:blue;
+            font-size: 1.5em;
+            color:#fff;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border:1px solid rgb(154, 154, 154);
+            
+        }
+        .course-description {
+            font-weight: bold;
+            background:#fff;
+            font-size: 1.25em;
+            display:flex;
+            align-items: center;
+            padding:10px 0;
+            border-bottom:1px solid rgb(154, 154, 154);
+            border-right:1px solid rgb(154, 154, 154);
+            border-top: 1px solid rgb(154, 154, 154);
+        }
+        .basic {
+            background:rgb(255, 222, 173);
+        }
+        .standard { 
+            background:rgb(251, 209, 82);
+        }
+        .high {
+            background:rgb(255, 192, 0);
+        }
+        .top-level {
+            background:rgb(255, 127, 80);
+        }
+    }
+}
+
+
+@media screen and (max-width:992px) {
+
+    .curriculum {
+        .details {
+            margin:3vh auto;
+            
+        }
+    }
+
+    .guidelines {
+        .course-and-short-description {
+            margin:3vh auto;
+            .course-type {
+                font-size: 1.25em;
+                color:#fff;
+                display:flex;
+                align-items: center;
+            }
+            .course-description {
+                font-weight: bold;
+                background:#fff;
+                font-size: 1em;
+                display:flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .top-banner {
+        .banner-image {
+            padding-top: calc(100% / 3 * 2);
+        }
+    }
+
+    .curriculum {
+        .details {
+            margin-top:2vh;
+        }
+        .recommend {
+            .recommend-for {
+                flex-direction: column;
+                .item {
+                    width:100%;
+                    margin:5px auto;
+                }
+            }
+        }  
+    }
+
+
+    .guidelines {
+        .course-guidelines {
+            h3 {
+                font-size: 2em;
+            }
+            .list {
+                flex-direction: column;
+                margin:10px auto;
+                .course-list {
+                    width:75%;
+                    margin:0 auto;
+                }
+            }
+        }
+        .course-and-short-description {
+            margin:3vh auto;
+            .course-type {
+                font-size: 1.25em;
+                color:#fff;
+                display:flex;
+                align-items: center;
+            }
+            .course-description {
+                font-weight: bold;
+                background:#fff;
+                font-size: 1em;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                border-top:none;
+                border-left: 1px solid rgb(154, 154, 154);;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .top-banner {
+        .banner-image {
+            padding-top: 75%;
+            // height:100vh;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }  
+    
+    .guidelines {
+        .course-guidelines {
+            .menu-list {
+                .menu {
+                    width:46%;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+@media screen and (max-width:576px) {
+    .top-banner {
+        .banner-image {
+            padding-top: 75%;
+            // height:100vh;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    } 
+    
+    .curriculum {
+        .details {
+            .curriculum-details {
+                .course-types {
+                    ul {
+                        li {
+                            margin-bottom:10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:500px) {
+    .guidelines {
+        .course-guidelines {
+            h3 {
+                font-size: 1.5em;
+            }
+            h4 {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:414px) {
+    .guidelines {
+        .course-guidelines {
+            h3 {
+                font-size:1.25em;
+            }
+            h4 {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .guidelines {
+        .course-guidelines {
+            h3 {
+                font-size:1.25em;
+            }
+            h4 {
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+

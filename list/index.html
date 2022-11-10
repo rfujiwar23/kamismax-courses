@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAMISMAX カリキュラムページ</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/course.css">
+  <link rel="stylesheet" href="../css/list.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+</head>
+<script>
+  $(document).ready(function () {
+    "use strict"
+
+    $(".nav li").click(function () {
+      var idx = $(this).index();
+      $(".snav").hide();
+      $(".nav li").removeClass("on");
+      $(this).addClass("on");
+      var $snav = $(".snav.s" + (idx + 1));
+      $snav.show();
+      $snav.find("li").eq(0).trigger("click");
+    });
+
+    $(".snav li").click(function () {
+      var tabNum = $(this).parent("ul").attr("class").replace("snav s", "");
+      var idx = $(this).index() + 1;
+      $(".snav li").removeClass("on");
+      $(this).addClass("on");
+      $(".cont").hide();
+      $(".cont" + tabNum + "_" + idx).show();
+    });
+
+    tabInit(0);
+  });
+
+  function tabInit(index) {
+    $(".nav li").eq(index).trigger("click");
+  }
+</script>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="../images/invade-logo-white.svg" alt="" height="20"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">ホーム</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">コース</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">カリキュラム</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="top-banner">
+      <div class="banner-image">
+        <img src="../images/test-img2.png" alt="代替テキスト">
+      </div>
+    </div>
+    <div class="container">
+      <div class="list col-lg-10 offset-lg-1 col-md-10 offset-md-1">
+        <ul class="nav">
+          <li>ベーシック</li>
+          <li>スタンダード</li>
+          <li>ハイクラス</li>
+        </ul>
+
+        <ul class="snav s1">
+          <li>CUT</li>
+          <li>COLOR</li>
+          <li>PERM</li>
+          <li>STRAIGHT</li>
+          <li>DIGITAL PERM</li>
+        </ul>
+
+        <ul class="snav s2">
+          <li>CUT</li>
+          <li>COLOR</li>
+          <li>PERM</li>
+          <li>STRAIGHT</li>
+          <li>DIGITAL PERM</li>
+        </ul>
+
+        <ul class="snav s3">
+          <li>CUT</li>
+          <li>COLOR</li>
+          <li>PERM</li>
+          <li>STRAIGHT</li>
+          <li>DIGITAL PERM</li>
+        </ul>
+
+        <div class="show-contents">
+          <div class="cont cont1_1">
+            <dl class="list_table">
+              <dt>トレンド ショート</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">VAN</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">SAKURA</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">CARNIVAL</div>
+                  <div class="column">KAZU</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">VeLO</div>
+                  <div class="column">赤松美和</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">Luxe</div>
+                  <div class="column">板倉充</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">grico</div>
+                  <div class="column">エザキヨシタカ</div>
+                </div>  
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">MINX</div>
+                  <div class="column">池戸裕二</div>
+                </div>          
+              </dd>
+              <dt>トレンド ボブ</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">GENUINE</div>
+                  <div class="column">倉田一摩</div>
+                </div>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">JENO</div>
+                  <div class="column">堀江昌樹</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">vaciland</div>
+                  <div class="column">細井豊</div>
+                </div>
+                <div class="row">
+                  <div class="column">モテ髪系</div>
+                  <div class="column">cache cache</div>
+                  <div class="column">前田渉</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">salon dakota</div>
+                  <div class="column">小谷英智香</div>
+                </div>  
+              </dd>
+              <dt>
+                トレンド マッシュ
+              </dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">PEEK-A-BOO</div>
+                  <div class="column">堀内邦雄</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">TOH</div>
+                  <div class="column">石原慎太郎</div>
+                </div>
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">ANNE.</div>
+                  <div class="column">澤野秀樹</div>
+                </div>
+                <div class="row">
+                  <div class="column">ストカジ系</div>
+                  <div class="column">SLEEPY</div>
+                  <div class="column">内埜晃宏</div>
+                </div>
+              </dd>
+            </dl>
+          </div>
+          <div class="cont cont1_2">
+            <dl class="list_table">
+
+              <dt>トレンド ボブ</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">GENUINE</div>
+                  <div class="column">倉田一摩</div>
+                </div>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">JENO</div>
+                  <div class="column">堀江昌樹</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">vaciland</div>
+                  <div class="column">細井豊</div>
+                </div>
+                <div class="row">
+                  <div class="column">モテ髪系</div>
+                  <div class="column">cache cache</div>
+                  <div class="column">前田渉</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">salon dakota</div>
+                  <div class="column">小谷英智香</div>
+                </div>  
+              </dd>
+              <dt>トレンド ショート</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">VAN</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">SAKURA</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">CARNIVAL</div>
+                  <div class="column">KAZU</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">VeLO</div>
+                  <div class="column">赤松美和</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">Luxe</div>
+                  <div class="column">板倉充</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">grico</div>
+                  <div class="column">エザキヨシタカ</div>
+                </div>  
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">MINX</div>
+                  <div class="column">池戸裕二</div>
+                </div>          
+              </dd>
+              
+              <dt>
+                トレンド マッシュ
+              </dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">PEEK-A-BOO</div>
+                  <div class="column">堀内邦雄</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">TOH</div>
+                  <div class="column">石原慎太郎</div>
+                </div>
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">ANNE.</div>
+                  <div class="column">澤野秀樹</div>
+                </div>
+                <div class="row">
+                  <div class="column">ストカジ系</div>
+                  <div class="column">SLEEPY</div>
+                  <div class="column">内埜晃宏</div>
+                </div>
+              </dd>
+            </dl>           
+          </div>
+          <div class="cont cont1_3">
+            <dl class="list_table">
+              <dt>トレンド ショート</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">VAN</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">SAKURA</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">CARNIVAL</div>
+                  <div class="column">KAZU</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">VeLO</div>
+                  <div class="column">赤松美和</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">Luxe</div>
+                  <div class="column">板倉充</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">grico</div>
+                  <div class="column">エザキヨシタカ</div>
+                </div>  
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">MINX</div>
+                  <div class="column">池戸裕二</div>
+                </div>          
+              </dd>
+              <dt>トレンド ボブ</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">GENUINE</div>
+                  <div class="column">倉田一摩</div>
+                </div>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">JENO</div>
+                  <div class="column">堀江昌樹</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">vaciland</div>
+                  <div class="column">細井豊</div>
+                </div>
+                <div class="row">
+                  <div class="column">モテ髪系</div>
+                  <div class="column">cache cache</div>
+                  <div class="column">前田渉</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">salon dakota</div>
+                  <div class="column">小谷英智香</div>
+                </div>  
+              </dd>
+              <dt>
+                トレンド マッシュ
+              </dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">PEEK-A-BOO</div>
+                  <div class="column">堀内邦雄</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">TOH</div>
+                  <div class="column">石原慎太郎</div>
+                </div>
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">ANNE.</div>
+                  <div class="column">澤野秀樹</div>
+                </div>
+                <div class="row">
+                  <div class="column">ストカジ系</div>
+                  <div class="column">SLEEPY</div>
+                  <div class="column">内埜晃宏</div>
+                </div>
+              </dd>
+            </dl>
+          </div>
+          <div class="cont cont1_4">
+            
+            <dl class="list_table">
+
+              <dt>トレンド ボブ</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">GENUINE</div>
+                  <div class="column">倉田一摩</div>
+                </div>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">JENO</div>
+                  <div class="column">堀江昌樹</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">vaciland</div>
+                  <div class="column">細井豊</div>
+                </div>
+                <div class="row">
+                  <div class="column">モテ髪系</div>
+                  <div class="column">cache cache</div>
+                  <div class="column">前田渉</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">salon dakota</div>
+                  <div class="column">小谷英智香</div>
+                </div>  
+              </dd>
+              <dt>トレンド ショート</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">VAN</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">SAKURA</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">CARNIVAL</div>
+                  <div class="column">KAZU</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">VeLO</div>
+                  <div class="column">赤松美和</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">Luxe</div>
+                  <div class="column">板倉充</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">grico</div>
+                  <div class="column">エザキヨシタカ</div>
+                </div>  
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">MINX</div>
+                  <div class="column">池戸裕二</div>
+                </div>          
+              </dd>
+              
+              <dt>
+                トレンド マッシュ
+              </dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">PEEK-A-BOO</div>
+                  <div class="column">堀内邦雄</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">TOH</div>
+                  <div class="column">石原慎太郎</div>
+                </div>
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">ANNE.</div>
+                  <div class="column">澤野秀樹</div>
+                </div>
+                <div class="row">
+                  <div class="column">ストカジ系</div>
+                  <div class="column">SLEEPY</div>
+                  <div class="column">内埜晃宏</div>
+                </div>
+              </dd>
+            </dl> 
+
+          </div>
+          <div class="cont cont1_5">
+            <dl class="list_table">
+              <dt>トレンド ショート</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">VAN</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">Cocoon</div>
+                  <div class="column">SAKURA</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">CARNIVAL</div>
+                  <div class="column">KAZU</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">VeLO</div>
+                  <div class="column">赤松美和</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ナチュラル系</div>
+                  <div class="column">Luxe</div>
+                  <div class="column">板倉充</div>
+                </div>   
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">grico</div>
+                  <div class="column">エザキヨシタカ</div>
+                </div>  
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">MINX</div>
+                  <div class="column">池戸裕二</div>
+                </div>          
+              </dd>
+              <dt>トレンド ボブ</dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">GENUINE</div>
+                  <div class="column">倉田一摩</div>
+                </div>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">ABBEY</div>
+                  <div class="column">小田嶋信人</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">JENO</div>
+                  <div class="column">堀江昌樹</div>
+                </div> 
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">vaciland</div>
+                  <div class="column">細井豊</div>
+                </div>
+                <div class="row">
+                  <div class="column">モテ髪系</div>
+                  <div class="column">cache cache</div>
+                  <div class="column">前田渉</div>
+                </div> 
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">salon dakota</div>
+                  <div class="column">小谷英智香</div>
+                </div>  
+              </dd>
+              <dt>
+                トレンド マッシュ
+              </dt>
+              <dd>
+                <div class="row">
+                  <div class="column">サスーン系</div>
+                  <div class="column">PEEK-A-BOO</div>
+                  <div class="column">堀内邦雄</div>
+                </div>
+                <div class="row">
+                  <div class="column">エッジィ系</div>
+                  <div class="column">TOH</div>
+                  <div class="column">石原慎太郎</div>
+                </div>
+                <div class="row">
+                  <div class="column">ファッション系</div>
+                  <div class="column">ANNE.</div>
+                  <div class="column">澤野秀樹</div>
+                </div>
+                <div class="row">
+                  <div class="column">ストカジ系</div>
+                  <div class="column">SLEEPY</div>
+                  <div class="column">内埜晃宏</div>
+                </div>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="cont cont2_1">
+
+            <div class="d-none d-sm-block">
+              <div class="row mx-0 pt-4 header">
+                <div class="col-6">学習項目</div>
+                <div class="col-6">担当講師</div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="cont cont2_2">Tab 2 + Content 2</div>
+          <div class="cont cont2_3">Tab 2 + Content 3</div>
+          <div class="cont cont2_4">Tab 2 + Content 4</div>
+          <div class="cont cont2_5">Tab 2 + Content 5</div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

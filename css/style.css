@@ -1,0 +1,159 @@
+.header {
+    display: block;
+    background:greenyellow;
+}
+
+.display-on-phone {
+    color:blue;
+    display: none;
+}
+
+.courses {
+    border:1px solid #9a9a9a;
+    position:relative;
+}
+
+
+
+.courseNumber {
+    position:absolute;
+    left:2%;
+    top:2%;
+}
+
+.table-contents p {
+    margin:0;
+}
+
+  ul {
+    list-style-type: none;
+    padding:0;
+  }
+  
+  ul.nav {
+    margin: 2vh auto;
+    width: 100%;
+    height: 60px;
+    padding:0;
+  }
+  
+  ul.nav > li {
+    float: left;
+    width: calc(100% / 3);
+    height: 60px;
+    background-color: rgb(255,255,255);
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+  }
+  
+  ul.nav > li.on {
+    background-color: rgb(252, 142, 86);
+    font-weight: bold;
+  }
+  
+  ul.snav {
+    display: none;
+    margin: 2vh auto;
+    width: 100%;
+    /* height: 60px; */
+    padding:0;
+    display:flex;
+    flex-direction: row;
+  }
+  
+  ul.snav > li {
+    /* display:flex; */
+    display:inline-block;
+    width: 20%;
+    height: 60px;
+    background-color: rgb(244,244,244);
+    border:1px dashed rgb(50,50,50);
+    text-align: center;
+    line-height: 60px;
+    font-size: small;
+    cursor: pointer;
+    margin:0;
+  }
+  
+  ul.snav > li:nth-child(2n) {
+    background-color: rgb(244,244,244);
+    border:1px dashed rgb(50,50,50);
+    border-bottom:none;
+  }
+
+  ul.snav > li:nth-child(odd) {
+    border-bottom:none;
+  }
+
+  ul.snav > li:nth-last-child(1) {
+    border-bottom:1px dashed rgb(50,50,50);
+  }
+
+  /* ul.snav > li:nth-last-child(1) {
+    border-bottom:none;
+  } */
+  
+  ul.snav > li:hover {
+    background-color: #673AB7;
+  }
+  
+  ul.snav > li.on {
+    background-color: #311B92;
+    color: #fff;
+  }
+  
+  .cont {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #E0F7FA;
+    text-align: center;
+  }
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    ul.snav {
+        display: none;
+        margin: 0 auto;
+        width: 100%;
+        /* height: 60px; */
+        padding:0;
+        display:flex;
+        flex-direction: column;
+      }
+      
+      ul.snav > li {
+        /* display:flex; */
+        display:inline-block;
+        width: 100%;
+      }
+
+      .display-on-phone {
+        color:#000;
+        font-weight: bold;
+        display: block;
+        font-size: 1.25em;
+        line-height: 2em;
+    }
+    
+}  
+
+
+@media screen and (max-width:576px) {
+    .header {
+        background:#f1c27b;
+        display: none;
+    }
+
+    .courses {
+        margin:2vh auto;
+    }
+
+    
+}
