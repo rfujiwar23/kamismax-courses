@@ -11,7 +11,7 @@
 .list_table {
 	margin-bottom: 5px;
 	& > dt {
-		background-color: #3388dd;
+		background-color: #3b638b;
 		color: #fff;
 		width: 20%;
         display: flex;
@@ -29,13 +29,17 @@
 			padding: 10px;
 			border-bottom: 1px dashed #9a9a9a;
             &:nth-child(1) {
-                border-top: 1px dashed #9a9a9a;
+                border-bottom: none;
             }
 			.column {
 				width: calc(100% / 3);
 			}
 			.type {
 				font-weight: bold;
+			}
+			.table-header {
+				background:#0e355c;
+				color:#fff;
 			}
 		}
 		& > ul {
@@ -59,7 +63,6 @@
 
 .list_table {
 	& > dt {
-		background-color: #3388dd;
 		color: #fff;
 		width: 100%;
 	}
@@ -103,6 +106,9 @@
 				.column {
 					font-size: 0.9em;
 				}
+				.table-header {
+					display: none;
+				}
 			}
 		}
 	}
@@ -114,6 +120,7 @@
 			& > .row {
 				.column {
 					width:100%;
+					padding:10px 5px;
 				}
 				.type {
 					text-decoration: underline;
