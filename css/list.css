@@ -10,6 +10,9 @@
   margin: 0px;
 }
 
+.list_table {
+  margin-bottom: 5px;
+}
 .list_table > dt {
   background-color: #3388dd;
   color: #fff;
