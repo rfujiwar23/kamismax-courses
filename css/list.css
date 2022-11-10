@@ -39,6 +39,9 @@
 .list_table > dd > .row .column {
   width: calc(100% / 3);
 }
+.list_table > dd > .row .type {
+  font-weight: bold;
+}
 .list_table > dd > ul {
   text-align: left;
 }
@@ -89,6 +92,22 @@
     display: flex;
     flex-wrap: wrap;
     border-bottom: 1px solid #ddd;
+  }
+}
+@media screen and (max-width: 576px) {
+  .list_table > dd > .row .column {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list_table > dd > .row .column {
+    width: 100%;
+  }
+  .list_table > dd > .row .type {
+    text-decoration: underline;
+    background: #0e355c;
+    padding: 10px;
+    color: #fff;
   }
 }
 
