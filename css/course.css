@@ -57,6 +57,18 @@
   background: #9a9a9a;
   color: #fff;
 }
+.curriculum .basic {
+  background: navajowhite;
+}
+.curriculum .standard {
+  background: #fbd152;
+}
+.curriculum .high {
+  background: #ffc000;
+}
+.curriculum .top-level {
+  background: coral;
+}
 .curriculum .recommend .recommend-for {
   display: flex;
   flex-direction: row;

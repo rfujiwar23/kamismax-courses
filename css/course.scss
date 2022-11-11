@@ -64,6 +64,18 @@
             }
         }
     }
+    .basic {
+        background:rgb(255, 222, 173);
+    }
+    .standard { 
+        background:rgb(251, 209, 82);
+    }
+    .high {
+        background:rgb(255, 192, 0);
+    }
+    .top-level {
+        background:rgb(255, 127, 80);
+    }
     .recommend {
         .recommend-for {
             display: flex;
