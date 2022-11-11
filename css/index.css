@@ -1,7 +1,3 @@
-.contents {
-  padding: 10px;
-}
-
 .navbar {
   background: #212529;
 }
@@ -11,7 +7,7 @@
   margin: 2em auto;
   color: #444;
   background: #fff;
-  padding: .5em;
+  padding: 0.5em;
   max-width: 800px;
 }
 
@@ -19,21 +15,15 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .tabs-nav > ul li {
   padding: 1em 1.5em;
   background: #fff;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   font-weight: 500;
   font-size: 1.3em;
 }
-
 .tabs-nav > ul li.is-active {
   background: #eee;
   color: #27b4a8;
@@ -44,7 +34,6 @@
   padding: 1.5em;
   background: #eee;
 }
-
 .tabs-content > div.is-active {
   display: block;
 }
@@ -67,89 +56,55 @@
 .seminar {
   margin: 2vh auto;
 }
-
 .seminar .seminar-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .seminar .seminar-top .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   display: column;
   width: 100%;
 }
-
 .seminar .seminar-top .column .inner-column-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-right: 5px;
 }
-
 .seminar .seminar-top .column .inner-column-left:nth-last-child(1) {
   margin-right: 0;
 }
-
 .seminar .seminar-top .column .inner-column-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-right: 5px;
 }
-
 .seminar .seminar-top .title-area .type {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   background: #000;
   color: #fff;
   padding: 10px 20px;
 }
-
 .seminar .seminar-top .title-area .title {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   background: #000;
   color: #fff;
   padding: 10px 20px;
 }
-
 .seminar .seminar-top .instructor .title {
   font-weight: bold;
   width: 20%;
 }
-
 .seminar .seminar-top .instructor .instructor-list {
   width: 80%;
   padding: 10px;
 }
-
 .seminar .seminar-top .instructor .instructor-list ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
-
 .seminar .seminar-top .instructor .instructor-list ul li {
   display: inline-block;
   background: #e6e6e6;
@@ -158,149 +113,98 @@
   border-radius: 5px;
   font-size: 0.9em;
 }
-
 .seminar .seminar-contents {
   margin-top: 1vh;
   padding: 2vh 0 1vh;
   background: #fff;
 }
-
 .seminar .seminar-contents .number {
   text-align: right;
 }
-
 .seminar .seminar-contents .number span {
   border: 1px solid #9a9a9a;
   padding: 3px 5px;
   margin-right: 10px;
 }
-
 .seminar .seminar-contents .number span em {
   font-style: normal;
 }
-
 .seminar .seminar-contents .seminar-details .brief-details {
   padding: 10px 20px;
   margin-bottom: 2vh;
   border-bottom: 1px solid #9a9a9a;
   font-weight: bold;
 }
-
 .seminar .seminar-contents .seminar-details .details .detail-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .seminar .seminar-contents .seminar-details .details .detail-top .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
 }
-
 .seminar .seminar-contents .seminar-details .details .detail-top .left {
   background: #9a9a9a;
   border: 1px solid #373333;
   padding: 5px 10px;
 }
-
 .seminar .seminar-contents .seminar-details .details .detail-top .left h4 {
   margin-bottom: 0;
   font-size: 18px;
 }
-
 .seminar .seminar-contents .seminar-details .details .detail-top .right {
   padding: 5px 20px;
   border: 1px solid #000;
 }
-
 .seminar .seminar-contents .seminar-details .details .detail-top .right p {
   margin-bottom: 0;
   font-size: 18px;
 }
-
 .seminar .seminar-contents .seminar-details .details .seminar-points {
   margin-top: 10px;
   padding: 10px;
   border: 1px dashed #9a9a9a;
 }
-
 .seminar .seminar-contents .seminar-details .details .seminar-points ul {
   margin-top: 10px;
   padding-left: 5px;
 }
-
 .seminar .seminar-contents .seminar-details .details .seminar-points ul li {
   font-size: 0.9em;
 }
-
 .seminar .seminar-contents .seminar-details .stylists {
   padding: 2vh 10px;
 }
-
 .seminar .seminar-contents .seminar-details .stylists .instructor-image .stylist h5 {
   font-size: 0.9em;
   text-align: center;
 }
-
 .seminar .seminar-contents .seminar-details .stylists .instructor-image .stylist h5 span {
   margin-right: 2px;
 }
-
 .seminar .seminar-contents .seminar-details .message-from-instructor {
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .seminar .seminar-contents .seminar-details .message-from-instructor .heading-text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .seminar .seminar-contents .seminar-details .message-from-instructor .heading-text span {
   background: #9a9a9a;
   padding: 5px 10px;
   font-size: 20px;
   color: #fff;
 }
-
 .seminar .seminar-contents .seminar-details .message-from-instructor .message {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 3;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 5px;
 }
 
@@ -313,32 +217,21 @@ footer {
 
 @media screen and (max-width: 768px) {
   .seminar .seminar-top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .seminar .seminar-top .column {
     margin-bottom: 1vh;
   }
   .seminar .seminar-contents .message-from-instructor .heading-text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .seminar .seminar-contents .message-from-instructor .message {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    flex: 2;
   }
 }
-
 @media screen and (max-width: 576px) {
   .seminar .seminar-top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .seminar .seminar-top .instructor {
     padding: 10px 20px;
@@ -350,73 +243,47 @@ footer {
     margin: 2px 0;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor .heading-text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor .message {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
+    flex: 2;
   }
 }
-
 @media screen and (max-width: 500px) {
   .seminar .seminar-top .title-area .type {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     background: #000;
     color: #fff;
   }
   .seminar .seminar-top .title-area .title {
-    -webkit-box-flex: 4;
-        -ms-flex: 4;
-            flex: 4;
+    flex: 4;
     background: #000;
     color: #fff;
   }
   .seminar .seminar-contents .seminar-details .details .detail-top {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .seminar .seminar-contents .seminar-details .details .detail-top .column {
     margin-right: 0;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor .heading-text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     padding: 10px;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor .message {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     padding: 10px;
   }
 }
-
 @media screen and (max-width: 390px) {
   .seminar .seminar-top .instructor {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .seminar .seminar-top .instructor .title {
     width: 100%;
@@ -425,9 +292,8 @@ footer {
     width: 100%;
   }
   .seminar .seminar-top .column .inner-column-right {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    justify-content: left;
   }
 }
+
 /*# sourceMappingURL=index.css.map */

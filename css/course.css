@@ -110,12 +110,16 @@
 .guidelines .course-guidelines .list {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
 }
 .guidelines .course-guidelines .list .course-list {
   width: 20%;
   text-align: center;
   border: 1px solid #9a9a9a;
   background: #fff;
+  font-size: 0.8em;
 }
 .guidelines .course-guidelines .menu-list {
   display: flex;
@@ -142,7 +146,7 @@
   margin: 3vh auto;
 }
 .guidelines .course-and-short-description .course-type {
-  font-size: 1.5em;
+  font-size: 1.15em;
   color: #fff;
   display: flex;
   align-items: center;
@@ -152,7 +156,7 @@
 .guidelines .course-and-short-description .course-description {
   font-weight: bold;
   background: #fff;
-  font-size: 1.25em;
+  font-size: 0.9em;
   display: flex;
   align-items: center;
   padding: 10px 0;
