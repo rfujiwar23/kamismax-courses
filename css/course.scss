@@ -1,6 +1,6 @@
 /* curriculum page */
 
-
+// course
 
 .wrapper {
     background:#dedede;
@@ -205,17 +205,12 @@
     }
 }
 
-// .clist {
-//     background:#fff;
-// }
-
 
 @media screen and (max-width:992px) {
 
     .curriculum {
         .details {
             margin:3vh auto;
-            
         }
     }
 
@@ -245,7 +240,6 @@
             padding-top: calc(100% / 3 * 2);
         }
     }
-
     .curriculum {
         .details {
             margin-top:2vh;
@@ -260,8 +254,6 @@
             }
         }  
     }
-
-
     .guidelines {
         .course-guidelines {
             h3 {
