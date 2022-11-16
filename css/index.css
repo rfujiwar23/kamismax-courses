@@ -745,10 +745,14 @@ footer {
   .curriculum .details {
     margin-top: 2vh;
   }
-  .curriculum .recommend .recommend-for {
-    flex-direction: column;
+  .curriculum .details .curriculum-details .course-types ul li {
+    margin: 5px auto;
   }
-  .curriculum .recommend .recommend-for .item {
+  .curriculum .details .curriculum-details .recommend-for {
+    flex-direction: column;
+    width: 75%;
+  }
+  .curriculum .details .curriculum-details .recommend-for .item {
     width: 100%;
     margin: 5px auto;
   }

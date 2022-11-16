@@ -302,6 +302,7 @@ footer {
 .top-intro {
     background:#fff;
     padding:5vh 0;
+    // margin:2vh auto;
    .contents {
     h4 {
         font-size: 2em;
@@ -810,16 +811,25 @@ footer {
     .curriculum {
         .details {
             margin-top: 2vh;
-        }
-        .recommend {
-            .recommend-for {
-                flex-direction: column;
-                .item {
-                    width: 100%;
-                    margin: 5px auto;
+            .curriculum-details {
+                .course-types {
+                    ul {
+                        li {
+                            margin:5px auto;
+                        }
+                    }
+                }
+                .recommend-for {
+                    flex-direction: column;
+                    width:75%;
+                    .item {
+                        width:100%;
+                        margin:5px auto;
+                    }
                 }
             }
         }
+        
     }
     .guidelines {
         .course-guidelines {
