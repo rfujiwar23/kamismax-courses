@@ -1,3 +1,38 @@
+body {
+    background:#dedede;
+}
+
+.log-in-button {
+    position: fixed;
+    bottom:1%;
+    right:2%;
+    width:100%;
+    max-width: 180px;
+    text-align: center;
+    
+        a {
+            text-decoration: none;
+           .login {
+                background:rgba(0, 0, 0,0.66);
+                color:#fff;
+                text-decoration: none;
+                padding:10px 20px;
+                border-radius: 5px;
+           }
+           .register {
+                background:rgba(126, 39, 39,0.66);
+                color:#fff;
+                text-decoration: none;
+                padding:10px 20px;
+                border-radius: 5px;
+            }
+        }
+    
+    
+    .button-area {
+        margin:2vh auto;
+    }
+}
 .navbar {
     background: rgb(33, 37, 41);
 }
@@ -254,10 +289,25 @@ footer {
 
 .wrapper {
     background: #dedede;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .br_on {
     display: none;
+}
+
+.top-intro {
+    background:#fff;
+    padding:5vh 0;
+   .contents {
+    h4 {
+        font-size: 2em;
+        color: #F16821;
+    }
+   }
 }
 
 .top-banner {
@@ -293,8 +343,13 @@ footer {
     background: rgba(255, 255, 255);
     padding: 20px 30px;
     margin-bottom: 3vh;
+    h3 {
+        color: rgb(223, 119, 39);
+        margin:0;
+    }
     .curriculum-image {
         margin: 0 auto;
+        background:#fff6db;
     }
     .details {
         padding: 20px 10px;
@@ -304,9 +359,7 @@ footer {
         justify-content: center;
         .curriculum-details {
             // background:blue;
-            h3 {
-                color: rgb(223, 119, 39);
-            }
+            
             .course-types {
                 display: flex;
                 flex-direction: row;
@@ -322,6 +375,27 @@ footer {
                         margin-right: 5px;
                         background: #9a9a9a;
                         color: #fff;
+                    }
+                }
+            }
+            h4 {
+                text-decoration: underline;
+                font-size: 1.25em;
+            }
+            .recommend-for {
+                display: flex;
+                flex-direction: row;
+                margin: 3vh auto;
+                .item {
+                    width: calc(100% / 3);
+                    .text {
+                        width: 98%;
+                        margin: 0 auto;
+                        text-align: center;
+                        border: 1px solid #9a9a9a;
+                        border-radius: 5px;
+                        font-size: 0.8em;
+                        background:#fff;
                     }
                 }
             }
@@ -363,11 +437,86 @@ footer {
         margin: 0 auto;
         text-align: center;
         font-size: 20px;
-        color: #fff;
         padding: 10px;
         border-radius: 10px;
         box-shadow: 1px 3px 6px rgba(50, 50, 50, 0.66);
+        a {
+            color: #fff;
+        }
     }
+}
+
+.top-page-main {
+    background:rgb(236 247 112);;
+    // padding:10px 20px;
+    .top-details {
+        // position:relative;
+        padding:2vh 10px;
+        .text {
+            // position:absolute;
+            
+            width:100%;
+            padding:10px;
+            text-align: left;
+            h3 {
+                font-size: 1.75em;
+                background:#000;
+                color:#fff;
+                padding:5px 10px;
+                text-align: center;
+            }
+            p {
+                padding:0 20px;
+                margin-top: 2vh;
+            }
+            .levels {
+                margin:3vh auto;
+                width:100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .level {
+                    display: inline-block;
+                    width:calc(95%/3);
+                    text-align: center;
+                    font-size: 1.25em;
+                    background:#fff;
+                            padding:10px 20px;
+                            border:1px solid rgb(214, 129, 0);
+                            border-radius: 5px;
+                            text-decoration: none;
+                    a {
+                        color:rgb(214, 129, 0);
+                        text-decoration: none;
+                            
+
+                    }
+                }
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    li {
+                        display: inline-block;
+                        margin:0 5px;
+                        a {
+                            text-decoration: none;
+                            color:rgb(214, 129, 0);
+                            background:#fff;
+                            padding:10px 20px;
+                            border:1px solid rgb(214, 129, 0);
+                            border-radius: 5px;
+                            &:hover {
+                                background:rgb(214, 129, 0);
+                                color:#fff;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 .guidelines {

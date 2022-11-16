@@ -1,4 +1,37 @@
 @charset "UTF-8";
+body {
+  background: #dedede;
+}
+
+.log-in-button {
+  position: fixed;
+  bottom: 1%;
+  right: 2%;
+  width: 100%;
+  max-width: 180px;
+  text-align: center;
+}
+.log-in-button a {
+  text-decoration: none;
+}
+.log-in-button a .login {
+  background: rgba(0, 0, 0, 0.66);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.log-in-button a .register {
+  background: rgba(126, 39, 39, 0.66);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.log-in-button .button-area {
+  margin: 2vh auto;
+}
+
 .navbar {
   background: #212529;
 }
@@ -226,10 +259,23 @@ footer {
 
 .wrapper {
   background: #dedede;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .br_on {
   display: none;
+}
+
+.top-intro {
+  background: #fff;
+  padding: 5vh 0;
+}
+.top-intro .contents h4 {
+  font-size: 2em;
+  color: #F16821;
 }
 
 .top-banner .banner-image {
@@ -264,8 +310,13 @@ footer {
   padding: 20px 30px;
   margin-bottom: 3vh;
 }
+.curriculum h3 {
+  color: #df7727;
+  margin: 0;
+}
 .curriculum .curriculum-image {
   margin: 0 auto;
+  background: #fff6db;
 }
 .curriculum .details {
   padding: 20px 10px;
@@ -273,9 +324,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.curriculum .details .curriculum-details h3 {
-  color: #df7727;
 }
 .curriculum .details .curriculum-details .course-types {
   display: flex;
@@ -294,6 +342,27 @@ footer {
   margin-right: 5px;
   background: #9a9a9a;
   color: #fff;
+}
+.curriculum .details .curriculum-details h4 {
+  text-decoration: underline;
+  font-size: 1.25em;
+}
+.curriculum .details .curriculum-details .recommend-for {
+  display: flex;
+  flex-direction: row;
+  margin: 3vh auto;
+}
+.curriculum .details .curriculum-details .recommend-for .item {
+  width: calc(100% / 3);
+}
+.curriculum .details .curriculum-details .recommend-for .item .text {
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+  font-size: 0.8em;
+  background: #fff;
 }
 .curriculum .basic {
   background: navajowhite;
@@ -329,10 +398,77 @@ footer {
   margin: 0 auto;
   text-align: center;
   font-size: 20px;
-  color: #fff;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 1px 3px 6px rgba(50, 50, 50, 0.66);
+}
+.curriculum .button-area a {
+  color: #fff;
+}
+
+.top-page-main {
+  background: #ecf770;
+}
+.top-page-main .top-details {
+  padding: 2vh 10px;
+}
+.top-page-main .top-details .text {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+.top-page-main .top-details .text h3 {
+  font-size: 1.75em;
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+}
+.top-page-main .top-details .text p {
+  padding: 0 20px;
+  margin-top: 2vh;
+}
+.top-page-main .top-details .text .levels {
+  margin: 3vh auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.top-page-main .top-details .text .levels .level {
+  display: inline-block;
+  width: calc(95%/3);
+  text-align: center;
+  font-size: 1.25em;
+  background: #fff;
+  padding: 10px 20px;
+  border: 1px solid #d68100;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.top-page-main .top-details .text .levels .level a {
+  color: #d68100;
+  text-decoration: none;
+}
+.top-page-main .top-details .text .levels ul {
+  list-style-type: none;
+  padding: 0;
+}
+.top-page-main .top-details .text .levels ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.top-page-main .top-details .text .levels ul li a {
+  text-decoration: none;
+  color: #d68100;
+  background: #fff;
+  padding: 10px 20px;
+  border: 1px solid #d68100;
+  border-radius: 5px;
+}
+.top-page-main .top-details .text .levels ul li a:hover {
+  background: #d68100;
+  color: #fff;
 }
 
 .guidelines {
