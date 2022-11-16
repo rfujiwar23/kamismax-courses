@@ -742,6 +742,10 @@ footer {
     padding-top: calc(100% / 3 * 2);
   }
 
+  .top-page-main .top-details .text .levels .level {
+    font-size: 0.9em;
+  }
+
   .curriculum .details {
     margin-top: 2vh;
   }
@@ -867,6 +871,10 @@ footer {
     padding-top: 75%;
     position: relative;
   }
+  .top-banner .banner-image h2 {
+    width: 100%;
+    text-align: center;
+  }
   .top-banner .banner-image img {
     position: absolute;
     top: 0;
@@ -941,6 +949,18 @@ footer {
     background: #0e355c;
     padding: 10px;
     color: #fff;
+  }
+
+  .top-page-main .top-details .text h3 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .top-page-main .top-details .text h3 {
+    font-size: 1.25em;
+  }
+  .top-page-main .top-details .text .levels .level {
+    font-size: 0.7em;
   }
 }
 @media screen and (max-width: 414px) {
