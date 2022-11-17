@@ -33,8 +33,35 @@ body {
         margin:2vh auto;
     }
 }
-.navbar {
-    background: rgb(33, 37, 41);
+header {
+    position: fixed;
+    z-index: 999;
+    top:0;
+    width:100%;
+    .navbar {
+        background: rgb(33, 37, 41);
+    }
+    .navbar-bottom {
+        background:#fff;
+        height: 60px;
+        .navbar-bottom-contents {
+            height: 60px;
+            a {
+                text-decoration: none;
+                font-size: 1em;
+                text-align: center;
+                
+                span {
+                    font-size: 0.8em;
+                    color:#000;
+                }
+                i {
+                    font-size: 0.8em;
+                    color:#9a9a9a;
+                }
+            }
+        }
+    }
 }
 
 footer {
@@ -312,6 +339,7 @@ footer {
 }
 
 .top-banner {
+    margin-top:100px;
     .banner-image {
         padding-top: calc(100% / 3);
         position: relative;
@@ -320,7 +348,7 @@ footer {
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            z-index: 999;
+            z-index: 99;
             color:#fff;
             span {
                 background:rgba(50,50,50,0.66);

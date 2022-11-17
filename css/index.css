@@ -32,8 +32,34 @@ body {
   margin: 2vh auto;
 }
 
-.navbar {
+header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+}
+header .navbar {
   background: #212529;
+}
+header .navbar-bottom {
+  background: #fff;
+  height: 60px;
+}
+header .navbar-bottom .navbar-bottom-contents {
+  height: 60px;
+}
+header .navbar-bottom .navbar-bottom-contents a {
+  text-decoration: none;
+  font-size: 1em;
+  text-align: center;
+}
+header .navbar-bottom .navbar-bottom-contents a span {
+  font-size: 0.8em;
+  color: #000;
+}
+header .navbar-bottom .navbar-bottom-contents a i {
+  font-size: 0.8em;
+  color: #9a9a9a;
 }
 
 footer {
@@ -278,6 +304,9 @@ footer {
   color: #F16821;
 }
 
+.top-banner {
+  margin-top: 100px;
+}
 .top-banner .banner-image {
   padding-top: calc(100% / 3);
   position: relative;
@@ -287,7 +316,7 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 99;
   color: #fff;
 }
 .top-banner .banner-image h2 span {
