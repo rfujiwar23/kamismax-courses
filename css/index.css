@@ -253,7 +253,7 @@ footer {
   padding: 2vh 10px;
 }
 .seminar .seminar-contents .seminar-details .stylists .instructor-image .stylist h5 {
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-align: center;
 }
 .seminar .seminar-contents .seminar-details .stylists .instructor-image .stylist h5 span {
@@ -551,7 +551,6 @@ footer {
   color: #fff;
   font-weight: bold;
   background: #212529;
-  padding: 1vh 10px;
 }
 .guidelines .course-guidelines .menu-list .menu .bottom {
   border: 1px solid #9a9a9a;
@@ -894,6 +893,9 @@ footer {
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor .message {
     flex: 2;
+    border: 1px dashed #9a9a9a;
+    margin-top: 2vh;
+    padding: 20px;
   }
 
   .top-banner .banner-image {
@@ -924,6 +926,7 @@ footer {
 
   .curriculum .details .curriculum-details .course-types ul li {
     margin-bottom: 10px;
+    width: 49%;
   }
 
   .list_table > dd > .row .column {
@@ -956,6 +959,9 @@ footer {
   }
   .seminar .seminar-contents .seminar-details .details .detail-top .column {
     margin-right: 0;
+  }
+  .seminar .seminar-contents .seminar-details .details .detail-top .right p {
+    font-size: 0.9em;
   }
   .seminar .seminar-contents .seminar-details .message-from-instructor {
     flex-direction: column;

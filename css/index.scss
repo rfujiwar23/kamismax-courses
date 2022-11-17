@@ -271,7 +271,7 @@ footer {
                 .instructor-image {
                     .stylist {
                         h5 {
-                            font-size: 0.9em;
+                            font-size: 0.8em;
 
                             text-align: center;
                             span {
@@ -597,7 +597,7 @@ footer {
                     color: #fff;
                     font-weight: bold;
                     background: rgb(33, 37, 41);
-                    padding: 1vh 10px;
+                    // padding: 1vh 10px;
                 }
                 .bottom {
                     border: 1px solid #9a9a9a;
@@ -989,6 +989,9 @@ footer {
                     }
                     .message {
                         flex: 2;
+                        border: 1px dashed #9a9a9a;
+                        margin-top: 2vh;
+                        padding: 20px;
                     }
                 }
             }
@@ -1035,6 +1038,7 @@ footer {
                     ul {
                         li {
                             margin-bottom: 10px;
+                            width:49%;
                         }
                     }
                 }
@@ -1091,6 +1095,12 @@ footer {
                         flex-direction: column;
                         .column {
                             margin-right: 0;
+                            
+                        }
+                        .right {
+                            p {
+                                font-size: 0.9em;
+                            }
                         }
                     }
                 }
