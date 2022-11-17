@@ -219,15 +219,15 @@ footer {
 }
 .seminar .seminar-contents .seminar-details .details .detail-top .left h4 {
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 .seminar .seminar-contents .seminar-details .details .detail-top .right {
-  padding: 5px 20px;
+  padding: 5px;
   border: 1px solid #000;
 }
 .seminar .seminar-contents .seminar-details .details .detail-top .right p {
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 .seminar .seminar-contents .seminar-details .details .seminar-points {
   margin-top: 10px;
@@ -273,7 +273,7 @@ footer {
 .seminar .seminar-contents .seminar-details .message-from-instructor .heading-text span {
   background: #9a9a9a;
   padding: 5px 10px;
-  font-size: 20px;
+  font-size: 16px;
   color: #fff;
 }
 .seminar .seminar-contents .seminar-details .message-from-instructor .message {
@@ -724,6 +724,11 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+    max-width: 960px;
+  }
+
   .curriculum .details {
     margin: 3vh auto;
   }

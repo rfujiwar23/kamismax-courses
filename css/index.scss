@@ -231,16 +231,16 @@ footer {
 
                         h4 {
                             margin-bottom: 0;
-                            font-size: 18px;
+                            font-size: 16px;
                         }
                     }
                     .right {
                         // background:#fff;
-                        padding: 5px 20px;
+                        padding: 5px;
                         border: 1px solid #000;
                         p {
                             margin-bottom: 0;
-                            font-size: 18px;
+                            font-size: 16px;
                         }
                     }
                 }
@@ -294,7 +294,7 @@ footer {
                     span {
                         background: #9a9a9a;
                         padding: 5px 10px;
-                        font-size: 20px;
+                        font-size: 16px;
                         color: #fff;
                     }
                 }
@@ -777,6 +777,12 @@ footer {
 // LIST
 
 @media screen and (max-width: 992px) {
+
+    .container {
+        width: 100%;
+        max-width:960px;
+    }
+
     .curriculum {
         .details {
             margin: 3vh auto;
