@@ -3,6 +3,23 @@ body {
   background: #dedede;
 }
 
+.link-to-videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-to-videos .view-video {
+  color: #3b638b;
+  border: 1px solid #3b638b;
+  margin-bottom: 3vh;
+}
+.link-to-videos .view-video:hover {
+  background: #3b638b;
+  border: 1px solid #fff;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.66);
+  color: #fff;
+}
+
 .log-in-button {
   position: fixed;
   bottom: 1%;
@@ -634,7 +651,7 @@ footer {
   border-bottom: none;
 }
 .list_table > dd > .row .column {
-  width: calc(100% / 3);
+  width: calc(100% / 5);
 }
 .list_table > dd > .row .type {
   font-weight: bold;
@@ -655,7 +672,7 @@ footer {
 .course-table {
   width: 90%;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1120px;
 }
 .course-table ul {
   list-style-type: none;
@@ -862,7 +879,8 @@ footer {
     border-top: 1px dashed #9a9a9a;
   }
   .list_table > dd > .row .column {
-    width: calc(100% / 3);
+    width: calc(100% / 5);
+    font-size: 0.8em;
   }
   .list_table > dd > ul {
     text-align: left;

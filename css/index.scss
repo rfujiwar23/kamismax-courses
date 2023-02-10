@@ -2,6 +2,23 @@ body {
     background:#dedede;
 }
 
+.link-to-videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .view-video {
+        color:#3b638b;
+        border:1px solid #3b638b;
+        margin-bottom:3vh;
+        &:hover {
+            background:#3b638b;
+            border:1px solid #fff;
+            box-shadow: 1px 3px 6px rgba(0, 0, 0,0.66);
+            color: #fff;
+        }
+    }
+}
+
 .log-in-button {
     position: fixed;
     bottom:1%;
@@ -684,7 +701,7 @@ footer {
                 border-bottom: none;
             }
             .column {
-                width: calc(100% / 3);
+                width: calc(100% / 5);
             }
             .type {
                 font-weight: bold;
@@ -707,7 +724,7 @@ footer {
 .course-table {
 	width: 90%;
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 1120px;
 	ul {
 		list-style-type: none;
 		padding: 0;
@@ -945,7 +962,8 @@ footer {
                     border-top: 1px dashed #9a9a9a;
                 }
                 .column {
-                    width: calc(100% / 3);
+                    width: calc(100% / 5);
+                    font-size: 0.8em;
                 }
             }
             & > ul {
