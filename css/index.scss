@@ -3,20 +3,26 @@ body {
 }
 
 .link-to-videos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .view-video {
-        color:#3b638b;
-        border:1px solid #3b638b;
-        margin-bottom:3vh;
-        &:hover {
-            background:#3b638b;
-            border:1px solid #fff;
-            box-shadow: 1px 3px 6px rgba(0, 0, 0,0.66);
-            color: #fff;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    text-align: right;
+    padding-right: 20px;
+    p {
+        font-size: 0.9em;
+        color: rgb(155, 3, 3);
+        
+        &::before {
+            content: '*';
+            font-size: 1em;
         }
     }
+}
+
+a.video-list-data {
+    background:#fff;
+    padding:20px;
+    box-shadow: 1px 3px 6px #3b638b;
 }
 
 .log-in-button {

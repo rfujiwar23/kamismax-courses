@@ -15,7 +15,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var $videoSrc;
+            $('.video-btn').click(function () {
+                $videoSrc = $(this).data("src");
+            });
+            console.log($videoSrc);
 
+            $('#stylistModal').on('shown.bs.modal', function (e) {
+                $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+            })
+            $('#stylistModal').on('hide.bs.modal', function (e) {
+                $("#video").attr('src', $videoSrc);
+            })
+        });
+
+
+
+    </script>
 </head>
 
 <body>
@@ -215,6 +236,7 @@
                 <!-- class seminar の　あとに color/perm などのclass名が入るようにする -->
                 <div class="seminar color">
                     <!--　セミナーのタイトル、担当者  -->
+
                     <div class="seminar-top">
                         <div class="title-area column">
                             <div class="type inner-column-left">
@@ -276,20 +298,56 @@
                                 <div class="col-md-6 stylists">
                                     <div class="instructor-image row d-flex justify-content-center align-items-center">
                                         <!-- 小さめで担当者の画像・名前を表示 -->
+                                        <div class="modal fade" id="stylistModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="ratio ratio-16x9">
+                                                            <iframe class="embed-responsive-item" src="" id="video"
+                                                                allowscriptaccess="always"></iframe>
+                                                        </div>
+                                                        <div class="go-to-link mt-4 mb-3" style="text-align:right;">
+                                                            <a class="btn btn-secondary" data-bs-dismiss="modal">閉じる</a>
+                                                            <a class="btn btn-primary" href="#">登録ページへ</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="stylist col-3">
-                                            <img src="../images/kamisma-stylist001.png" alt="スタイリスト名" class="img-fluid">
+                                            <a class="video-btn" data-bs-toggle="modal"
+                                                data-src="https://www.youtube.com/embed/f_9bD4EMcgQ"
+                                                data-bs-target="#stylistModal">
+                                                <img src="../images/kamisma-stylist001.png" alt="スタイリスト名"
+                                                    class="img-fluid">
+                                            </a>
                                             <h5><span>横藤田聡</span>氏<br>234003</h5>
                                         </div>
                                         <div class="stylist col-3">
-                                            <img src="../images/kamisma-stylist002.png" alt="スタイリスト名" class="img-fluid">
+                                            <a class="video-btn" data-bs-toggle="modal"
+                                                data-src="https://www.youtube.com/embed/RTDCIySGqP0"
+                                                data-bs-target="#stylistModal">
+                                                <img src="../images/kamisma-stylist002.png" alt="スタイリスト名" class="img-fluid">
+                                            </a>
+                                            
                                             <h5><span>横藤田聡</span>氏<br>234003</h5>
                                         </div>
                                         <div class="stylist col-3">
+                                            <a class="video-btn" data-bs-toggle="modal"
+                                                data-src="https://www.youtube.com/embed/wM7142NlCdQ"
+                                                data-bs-target="#stylistModal">
+                                                <img src="../images/kamisma-stylist003.png" alt="スタイリスト名" class="img-fluid">
+                                            </a>
+                                            
+                                            <h5><span>横藤田聡</span>氏<br>234003</h5>
+                                        </div>
+                                        <div class="stylist col-3">
+                                            <a class="video-btn" data-bs-toggle="modal"
+                                            data-src="https://www.youtube.com/embed/Lo74bOHR2j0"
+                                            data-bs-target="#stylistModal">
                                             <img src="../images/kamisma-stylist003.png" alt="スタイリスト名" class="img-fluid">
-                                            <h5><span>横藤田聡</span>氏<br>234003</h5>
-                                        </div>
-                                        <div class="stylist col-3">
-                                            <img src="../images/kamisma-stylist003.png" alt="スタイリスト名" class="img-fluid">
+                                        </a>
                                             <h5><span>横藤田聡</span>氏<br>234003</h5>
                                         </div>
                                     </div>
@@ -304,53 +362,9 @@
                                 </div>
                             </div>
                             <div class="link-to-videos">
-                                <a type="button" class="btn view-video" data-bs-toggle="modal"
-                                    data-bs-target="#cutseminar001">動画を視聴する</a>
-                                    <!-- data-bs-targetとmodalのidはview_video_idの値 -->
-                                <div class="modal fade" id="cutseminar001" data-bs-keyboard="true" tabindex="-1"
-                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">サンプル動画</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <!-- youtube_video1のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                <!-- youtube_video2のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                <!-- youtube_video3のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                <!-- youtube_video4のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">閉じる</button>
-                                                <button type="button" class="btn btn-primary">登録ページへ</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p>出演者をクリックしてプレビューを視聴する</p>
+                                <!-- data-bs-targetとmodalのidはview_video_idの値 -->
+                                
                             </div>
                         </div>
                     </div>
@@ -442,48 +456,8 @@
                                 </div>
                             </div>
                             <div class="link-to-videos">
-                                <a type="button" class="btn view-video" data-bs-toggle="modal"
-                                    data-bs-target="#cutseminar002">動画を視聴する</a>
-                                    <!-- data-bs-targetとmodalのidはview_video_idの値 -->
-                                <div class="modal fade" id="cutseminar002" data-bs-keyboard="true" tabindex="-1"
-                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">サンプル動画</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <!-- youtube_video1のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                <!-- youtube_video2のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                <!-- youtube_video3のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">閉じる</button>
-                                                <button type="button" class="btn btn-primary">登録ページへ</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p>出演者をクリックしてプレビューを視聴する</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -575,40 +549,8 @@
                                 </div>
                             </div>
                             <div class="link-to-videos">
-                                <a type="button" class="btn view-video" data-bs-toggle="modal"
-                                    data-bs-target="#cutseminar003">動画を視聴する</a>
-                                    <!-- data-bs-targetとmodalのidはview_video_idの値 -->
-                                <div class="modal fade" id="cutseminar003" data-bs-keyboard="true" tabindex="-1"
-                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">サンプル動画</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <!-- youtube_video1のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                                <!-- youtube_video2のリンク -->
-                                                <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                                                    <iframe class="embed-responsive-item"
-                                                        src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                                        style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">閉じる</button>
-                                                <button type="button" class="btn btn-primary">登録ページへ</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p>出演者をクリックしてプレビューを視聴する</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -618,7 +560,7 @@
         </div>
 
         <footer>
-            KAMISMAX 2022
+            KAMISMAX 2023
         </footer>
     </div>
 </body>

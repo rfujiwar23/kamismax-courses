@@ -18,7 +18,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var $videoSrc;
+      $('.video-btn').click(function () {
+        $videoSrc = $(this).data("src");
+      });
+      console.log($videoSrc);
+
+      $('#stylistModal').on('shown.bs.modal', function (e) {
+        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+      })
+      $('#stylistModal').on('hide.bs.modal', function (e) {
+        $("#video").attr('src', $videoSrc);
+      })
+    });
+
+
+
+  </script>
 </head>
+
+
 <script>
   $(document).ready(function () {
     "use strict"
@@ -72,8 +96,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"><img src="../images/kmax-logo@2x.png" alt=""
-              height="20"></a>
+          <a class="navbar-brand" href="../index.html"><img src="../images/kmax-logo@2x.png" alt="" height="20"></a>
 
         </div>
       </nav>
@@ -109,6 +132,7 @@
       <div class="course-guidelines">
         <!-- WordPressで入力できる項目 -->
         <h3><span>段階的に学べるコースカリキュラム</span></h3>
+
 
         <!-- WordPressで入力できる項目 -->
         <h4>
@@ -149,6 +173,8 @@
                 {text description}
             </div>
           </div> -->
+
+
 
 
           <!-- コースの種類 -->
@@ -241,57 +267,59 @@
 
           <div class="show-contents">
             <div class="cont cont1_1">
+              <div class="modal fade" id="stylistModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <!-- 16:9 aspect ratio -->
+                      <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"></iframe>
+                      </div>
+                      <div class="go-to-link mt-4 mb-3" style="text-align:right;">
+                        <a class="btn btn-secondary" data-bs-dismiss="modal">閉じる</a>
+                        <a class="btn btn-primary" href="#">登録ページへ</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
 
               <dl class="list_table">
                 <dt>トレンド ショート</dt>
                 <dd>
+
                   <div class="row p-0">
                     <div class="column table-header">種類</div>
                     <div class="column table-header">サロン</div>
                     <div class="column table-header">スタイリスト</div>
                     <div class="column table-header">動画ID</div>
                     <div class="column table-header">プレビュー</div>
-
                   </div>
                   <div class="row">
                     <div class="column type">サスーン系</div>
                     <div class="column">ABBEY</div>
                     <div class="column">小田嶋信人</div>
                     <div class="column">0000001</div>
-                    <div class="column"><a type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#id0000001">動画を視聴する</a></div>
+                    <div class="column">
+                      <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/f_9bD4EMcgQ" data-bs-target="#stylistModal">
+                        動画を視聴する
+                      </button>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="column type">エッジィ系</div>
                     <div class="column">Cocoon</div>
                     <div class="column">VAN</div>
                     <div class="column">0000001</div>
-                    <div class="column"><a type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#id0000001">動画を視聴する</a></div>
-
-                    <!-- modal id を concatのメソッドを利用して id + 動画ID番号になるようにする -->
-                    <div class="modal fade" id="id0000001" data-bs-keyboard="true" tabindex="-1"
-                      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">サンプル動画</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-
-                            <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                            </div>
-
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                            <button type="button" class="btn btn-primary">登録ページへ</button>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="column">
+                      <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/dnLkRjyXFXE" data-bs-target="#stylistModal">
+                        動画を視聴する
+                      </button>
                     </div>
                   </div>
                   <div class="row">
@@ -299,28 +327,11 @@
                     <div class="column">Cocoon</div>
                     <div class="column">SAKURA</div>
                     <div class="column">0000002</div>
-                    <div class="column"><a type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#id0000002">動画を視聴する</a></div>
-                    <div class="modal fade" id="id0000002" data-bs-keyboard="true" tabindex="-1"
-                      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">サンプル動画</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                            <button type="button" class="btn btn-primary">登録ページへ</button>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="column">
+                      <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/Au-SWZ-fNK4" data-bs-target="#stylistModal">
+                        動画を視聴する
+                      </button>
                     </div>
                   </div>
                   <div class="row">
@@ -328,28 +339,11 @@
                     <div class="column">CARNIVAL</div>
                     <div class="column">KAZU</div>
                     <div class="column">0000003</div>
-                    <div class="column"><a type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#id0000003">動画を視聴する</a></div>
-                    <div class="modal fade" id="id0000003" data-bs-keyboard="true" tabindex="-1"
-                      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">サンプル動画</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="ratio ratio-16x9 text-center mt-4 mb-4">
-                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SdXMh68Do7g"
-                                style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
-                            <button type="button" class="btn btn-primary">登録ページへ</button>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="column">
+                      <button type="button" class="btn btn-primary video-btn" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/pBQhF_aURwo" data-bs-target="#stylistModal">
+                        動画を視聴する
+                      </button>
                     </div>
                   </div>
                   <div class="row">
@@ -480,6 +474,8 @@
                 </dd>
               </dl>
             </div>
+
+            
             <div class="cont cont1_2">
               <dl class="list_table">
 
@@ -1946,6 +1942,10 @@
           </div>
         </div>
 
+        <div class="d-flex justify-content-center">
+          <a class="my-4 btn video-list-data">ベーシックカットコース一覧<br>（会員の方はこちらから本編映像をご覧いただけます）</a>
+        </div>
+
 
 
       </div>
@@ -1953,7 +1953,7 @@
   </div>
 
   <footer>
-    KAMISMAX 2022
+    KAMISMAX 2023
   </footer>
 
 
