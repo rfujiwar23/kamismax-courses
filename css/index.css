@@ -21,6 +21,10 @@ a.video-list-data {
   padding: 20px;
   box-shadow: 1px 3px 6px #3b638b;
 }
+a.video-list-data:hover {
+  background: #3b638b;
+  color: #fff;
+}
 
 .log-in-button {
   position: fixed;
@@ -533,7 +537,9 @@ footer {
 }
 .guidelines .course-guidelines h3 span {
   padding-bottom: 3px;
-  border-bottom: 3px solid #ff7f4f;
+  padding: 10px;
+  color: #fff;
+  background: #000;
 }
 .guidelines .course-guidelines h4 {
   text-align: center;
