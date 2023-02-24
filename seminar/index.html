@@ -19,6 +19,15 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
+        $(function(){
+      $('.modal').on('hidden.bs.modal', function (e) {
+        $iframe = $(this).find("iframe");
+        $iframe.attr("src", $iframe.attr("src"));
+      });
+    });
+    
+      </script>
+    <!-- <script>
         $(document).ready(function () {
             var $videoSrc;
             $('.video-btn').click(function () {
@@ -36,7 +45,7 @@
 
 
 
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -298,26 +307,29 @@
                                 <div class="col-md-6 stylists">
                                     <div class="instructor-image row d-flex justify-content-center align-items-center">
                                         <!-- 小さめで担当者の画像・名前を表示 -->
-                                        <div class="modal fade" id="stylistModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-body">
-                                                        <div class="ratio ratio-16x9">
-                                                            <iframe class="embed-responsive-item" src="" id="video"
-                                                                allowscriptaccess="always"></iframe>
-                                                        </div>
-                                                        <div class="go-to-link mt-4 mb-3" style="text-align:right;">
-                                                            <a class="btn btn-secondary" data-bs-dismiss="modal">閉じる</a>
-                                                            <a class="btn btn-primary" href="#">登録ページへ</a>
-                                                        </div>
-                                                    </div>
+                                        <div class="modal fade" id="stylistModal" tabindex="-1" aria-labelledby="stylistModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="stylistModalLabel">Modal title</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
+                                                <div class="modal-body">
+                                                  <div class="ratio ratio-16x9">
+                                                    <!-- <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"></iframe> -->
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9ge9SuQWeAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                  </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">本編はこちら</button>
+                                                </div>
+                                              </div>
                                             </div>
-                                        </div>
+                                          </div>
                                         <div class="stylist col-3">
                                             <a class="video-btn" data-bs-toggle="modal"
-                                                data-src="https://www.youtube.com/embed/f_9bD4EMcgQ"
+                                               
                                                 data-bs-target="#stylistModal">
                                                 <img src="../images/kamisma-stylist001.png" alt="スタイリスト名"
                                                     class="img-fluid">
@@ -326,7 +338,7 @@
                                         </div>
                                         <div class="stylist col-3">
                                             <a class="video-btn" data-bs-toggle="modal"
-                                                data-src="https://www.youtube.com/embed/RTDCIySGqP0"
+                                               
                                                 data-bs-target="#stylistModal">
                                                 <img src="../images/kamisma-stylist002.png" alt="スタイリスト名" class="img-fluid">
                                             </a>
@@ -335,7 +347,7 @@
                                         </div>
                                         <div class="stylist col-3">
                                             <a class="video-btn" data-bs-toggle="modal"
-                                                data-src="https://www.youtube.com/embed/wM7142NlCdQ"
+                                                
                                                 data-bs-target="#stylistModal">
                                                 <img src="../images/kamisma-stylist003.png" alt="スタイリスト名" class="img-fluid">
                                             </a>
@@ -344,7 +356,7 @@
                                         </div>
                                         <div class="stylist col-3">
                                             <a class="video-btn" data-bs-toggle="modal"
-                                            data-src="https://www.youtube.com/embed/Lo74bOHR2j0"
+                                            
                                             data-bs-target="#stylistModal">
                                             <img src="../images/kamisma-stylist003.png" alt="スタイリスト名" class="img-fluid">
                                         </a>
